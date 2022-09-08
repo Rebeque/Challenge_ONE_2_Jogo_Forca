@@ -88,6 +88,86 @@ body{
 
 }
 
+.forca{
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 45%;
+    top: 10%;
+
+}
+.hidden {
+    display: none;
+}
+
+.botao_add_palavra, .botao_fecha {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(99, 63, 9);
+    text-transform: uppercase;
+    background: white;
+    border: 2px solid rgb(99, 63, 9);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.modal {
+    position: absolute;
+    top: 35%;
+    left: 0px;
+    width: 98vw;
+    height: 50vh;
+    padding: 10px;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.modal-win {
+    position: absolute;
+    top: 35%;
+    left: 0px;
+    width: 98vw;
+    height: 50vh;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.win-div {
+    text-align: center;
+}
+
+.win-text {
+    background: rgba(255, 255, 255, 0.693);
+    border-radius: 120px;
+}
+
+.modal-lose {
+    position: absolute;
+    top: 35%;
+    left: 0px;
+    width: 98vw;
+    height: 50vh;
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.win-lose {
+    text-align: center;
+}
+
+.lose-text {
+    background: rgba(255, 255, 255, 0.693);
+    border-radius: 120px;
+}
+
 #footer {
     text-align: center;
     font-family: 'Roboto';

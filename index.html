@@ -4,33 +4,94 @@
     <meta charset="UTF-8">
     <title>Jogo da Forca - Challenge 2 ONE Alura - Turma 3</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <! -- Limpa CSS e estabelece o novo -->
     <link rel="stylesheet" href="/assets/reset.css">
     <link rel="stylesheet" href="/assets/style.css">
 </head>
-
+<main>
 <body>
+
+<h1 class="hidden">Jogo da Forca - Challenge 2 ONE Alura - Turma 3</h1>
+
+<! -- Imagem Logotipo com link linkedin -->
 <div class="banner">
     <div class="logo">
+        <a href="https://www.linkedin.com/in/vrebeque/" target="_blank">
         <img src="/images/logo.svg" alt="Vinícius Nunes Rebeque" id="logomarca">
+        </a>
     </div>
 </div>
 
-<button class="botao_azul">
-    <div class="texto_botao_azul">
-        Começar a Jogar
+<section class="hidden">
+    <div class="hint-container">
+        <h2>Dica</h2>
+        <p class="hint">- - -</p>
     </div>
-</button>
 
-<button class="botao_branco">
-    <div class="texto_botao_branco">
-    Adicionar Palavra ao Sorteio
+    <div class="wrong-letters-div">
+        <p class="wrong-letters-p">Letras que você errou</p>
+        <span class="special">&#8614;</span>
     </div>
-</button>
+
+    <img class="forca" src="/images/forca.svg" alt="Imagem de uma forca">
+
+    <div class="container-lines">
+        <span class="lines">?</span>
+    </div>
+</section>
+
+<div class="container">
+    <section class="botoes_iniciais">
+
+    <! -- Primeiro botão para Começar Jogo -->
+    <button class="botao_azul" id="novo_jogo">
+        <div class="texto_botao_azul">
+            Começar a Jogar
+        </div>
+    </button>
+
+    <! -- Botão para adicionar palavra ao sorteio -->
+    <button class="botao_branco" id="add_palavra">
+        <div class="texto_botao_branco">
+        Adicionar Palavra ao Sorteio
+        </div>
+    </button>
+
+    </section>
+</div>
+
+<div class="modal hidden">
+    <div class="add_palavra_div">
+        <p>Nova Palavra</p>
+        <textarea class="nova_palavra" id="nova_palavra"></textarea>
+        <p>Dica</p>
+        <textarea class="dica_nova_palavra" id="dica_nova_palavra"></textarea>
+        <br>
+        <br>
+        <button class="botao_azul_add" id="botao_add_palavra">Adicionar</button>
+        <button class="botao_branco_add" id="botao_fecha">Fechar</button>
+    </div>
+</div>
+
+<div class="modal-win hidden">
+    <div class="win-div">
+        <h1 class="win-text">Você acertou 🤩</h1>
+    </div>
+</div>
+
+<div class="modal-lose hidden">
+    <div class="lose-div">
+        <h1 class="lose-text">Você perdeu 😫</h1>
+    </div>
+</div>
 
 
-
+<! -- Footer fixo propaganda -->
 <footer id="footer">
     <p>Desenvolvido por Vinícius N. Rebeque. Me encontre em:<a href="http://www.linkedin.com/in/vrebeque">👉🏻 LinkedIn | </a><a href="http://www.github.com/Rebeque">GitHub</a></p>
 </footer>
+<! -- Chamada ao Javascript -->
+<script src="script.js"></script>
 </body>
+</main>
 </html>
