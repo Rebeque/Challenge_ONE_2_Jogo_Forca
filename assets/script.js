@@ -34,7 +34,7 @@ const eraseData = function() {
     document.querySelectorAll(".lines").forEach(function(line) {
         line.remove();
     });
-    gallowsHTML.src = "/images/forca.svg";
+    gallowsHTML.src = "images/forca.png";
 }
 
 document.querySelector(".hint-container").classList.add("hidden");
