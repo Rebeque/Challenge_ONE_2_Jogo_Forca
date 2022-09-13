@@ -5,8 +5,8 @@
     <title>Jogo da Forca - Challenge 2 ONE Alura - Turma 3</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <! -- Limpa CSS e estabelece o novo -->
-    <link rel="stylesheet" href="/assets/reset.css">
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <main>
 <body>
@@ -17,12 +17,11 @@
 <div class="banner">
     <div class="logo">
         <a href="https://www.linkedin.com/in/vrebeque/" target="_blank">
-        <img src="/images/logo.svg" alt="Vinícius Nunes Rebeque" id="logomarca">
+        <img src="images/logo.svg" alt="Vinícius Nunes Rebeque" id="logomarca">
         </a>
     </div>
 </div>
 
-<section class="hidden">
     <div class="hint-container">
         <h2>Dica</h2>
         <p class="hint">- - -</p>
@@ -30,15 +29,21 @@
 
     <div class="wrong-letters-div">
         <p class="wrong-letters-p">Letras que você errou</p>
-        <span class="special">&#8614;</span>
+
     </div>
 
-    <img class="forca" src="/images/forca.svg" alt="Imagem de uma forca">
+<button class="reiniciar_botao">
+    <div class="texto_reiniciar_botao">
+        Reiniciar
+    </div>
+</button>
+
+    <img class="forca" src="images/forca.png" alt="Imagem de uma forca">
 
     <div class="container-lines">
-        <span class="lines">?</span>
+        <span class="lines"></span>
     </div>
-</section>
+
 
 <div class="container">
     <section class="botoes_iniciais">
@@ -62,10 +67,10 @@
 
 <div class="modal hidden">
     <div class="add_palavra_div">
-        <p>Nova Palavra</p>
-        <textarea class="nova_palavra" id="nova_palavra"></textarea>
-        <p>Dica</p>
-        <textarea class="dica_nova_palavra" id="dica_nova_palavra"></textarea>
+        <p></p>
+        <textarea class="nova_palavra" id="nova_palavra" placeholder="Nova palavra aqui"></textarea>
+        <p></p>
+        <textarea class="dica_nova_palavra" id="dica_nova_palavra" placeholder="Dica aqui"></textarea>
         <br>
         <br>
         <button class="botao_azul_add" id="botao_add_palavra">Adicionar</button>
@@ -91,7 +96,7 @@
     <p>Desenvolvido por Vinícius N. Rebeque. Me encontre em:<a href="http://www.linkedin.com/in/vrebeque">👉🏻 LinkedIn | </a><a href="http://www.github.com/Rebeque">GitHub</a></p>
 </footer>
 <! -- Chamada ao Javascript -->
-<script src="script.js"></script>
+<script src="assets/script.js"></script>
 </body>
 </main>
 </html>

@@ -39,6 +39,67 @@ body{
     border-radius: 24px;
 }
 
+.texto_reiniciar_botao {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6%;
+    /* White */
+    color: #FFFFFF;
+}
+
+.reiniciar_botao {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    position: absolute;
+    width: 317px;
+    height: 105px;
+    right: 8%;
+    top: 35%;
+
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+}
+
+.add_palavra_div {
+    position: absolute;
+    left: 8%;
+    top: 0%;
+}
+
+.nova_palavra {
+    /* Digite seu texto */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+}
+
+.dica_nova_palavra {
+    /* Digite seu texto */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+}
+
+
+
 .botao_branco {
     box-sizing: border-box;
 
@@ -92,8 +153,8 @@ body{
     position: absolute;
     width: 10%;
     height: auto;
-    left: 45%;
-    top: 10%;
+    left: 46.5%;
+    top: 5%;
 
 }
 .hidden {
@@ -101,6 +162,17 @@ body{
 }
 
 .botao_add_palavra, .botao_fecha {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(99, 63, 9);
+    text-transform: uppercase;
+    background: white;
+    border: 2px solid rgb(99, 63, 9);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.botao_azul_add, .botao_branco_add {
     font-size: 14px;
     font-weight: bold;
     color: rgb(99, 63, 9);
@@ -125,47 +197,111 @@ body{
 }
 
 .modal-win {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
-    top: 35%;
-    left: 0px;
-    width: 98vw;
-    height: 50vh;
-    font-family: serif;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 10px;
+    top: 59.5%;
+    left: 32.5%;
+    background: #F3F5FC;
+    /* White */
+    color: #0A3871;
 }
 
 .win-div {
     text-align: center;
 }
 
+.lose-div {
+    text-align: center;
+}
+
 .win-text {
-    background: rgba(255, 255, 255, 0.693);
     border-radius: 120px;
 }
 
 .modal-lose {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    margin-left: auto;
+    margin-right: auto;
     position: absolute;
-    top: 35%;
-    left: 0px;
-    width: 98vw;
-    height: 50vh;
-    font-family: serif;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.win-lose {
-    text-align: center;
+    top: 59.5%;
+    left: 32.5%;
+    background: #F3F5FC;
+    /* White */
+    color: #0A3871;
 }
 
 .lose-text {
-    background: rgba(255, 255, 255, 0.693);
     border-radius: 120px;
+}
+
+.container-lines {
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 45%;
+    top: 35%;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6%;
+    /* White */
+    color: #0A3871;
+
+}
+
+.hint-container {
+    color: #0A3871;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    width: 10%;
+    height: auto;
+    left: 45%;
+    top: 40%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6%;
+}
+
+.wrong-letters-div {
+    color: #0A3871;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 20%;
+    height: auto;
+    left: 8%;
+    top: 35%;
+    position: absolute;
+}
+
+.wrong-letters-p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+}
+
+.wrong-letters {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
 }
 
 #footer {
