@@ -1,5 +1,6 @@
 "use strict";
 
+
 let playState = false;
 let currentWord;
 let hintWord;
@@ -10,8 +11,8 @@ let errorCount = 0;
 let count = 0;
 let currentWordLength = 0;
 
-let wordsArray = ["FACA", "TESOURA", "DADO", "CELULAR", "ARGENTINA", "VENEZUELA", "PORTUGAL", "CHINA", "ARROZ", "BANANA", "SALADA", "LEITE"]
-let hint = ["OBJETO", "OBJETO", "OBJETO", "OBJETO","PAÍS", "PAÍS","PAÍS","PAÍS","ALIMENTO", "ALIMENTO", "ALIMENTO", "ALIMENTO"];
+let wordsArray = ["DESENVOLVEDOR", "JUNIOR", "ALURA", "MOBILE", "BRASIL", "VENEZUELA", "PORTUGAL", "CHINA", "ARROZ", "BANANA", "SALADA", "LEITE"]
+let hint = ["PROFISSÃO", "CARGO INICIAL", "PLATAFORMA CURSOS", "CELULAR","PAÍS", "PAÍS","PAÍS","PAÍS","ALIMENTO", "ALIMENTO", "ALIMENTO", "ALIMENTO"];
 
 //----------------------------------------------------------------------//
 const containerLines = document.querySelector(".container-lines");
@@ -22,6 +23,32 @@ const modalLoseHTML = document.querySelector(".modal-lose");
 const modalHTML = document.querySelector(".modal");
 const gallowsHTML = document.querySelector(".forca");
 const restart = document.querySelector(".reiniciar_botao")
+
+var audio_errou = new Audio('audio/errou.mp3');
+var audio_acerto = new Audio('audio/acerto.mp3');
+var audio_ganho = new Audio('audio/ganho.mp3');
+var audio_start = new Audio('audio/start.mp3');
+var audio_perdeu = new Audio('audio/perdeu.mp3');
+var audio_repetida = new Audio('audio/repetida.mp3');
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function ganho_delay() {
+    await sleep(1500);
+    audio_ganho.play();
+}
+
+async function perdeu_delay() {
+    await sleep(1500);
+    audio_perdeu.play();
+}
+
+async function repetida_delay() {
+    await sleep(250);
+    audio_repetida.play();
+}
 
 const eraseData = function() {
     wrongLetters = [];
@@ -44,7 +71,7 @@ document.querySelector(".reiniciar_botao").classList.add("hidden");
 //----------------------------------------------------------------------//
 
 newGameBtn.addEventListener('click', function() {
-
+audio_start.play();
     playState = true;
     document.querySelector(".reiniciar_botao").classList.remove("hidden");
 //----Some com botões ao iniciar-----------------//
@@ -82,7 +109,9 @@ document.addEventListener("keydown", function(event) {
             let key = event.key.toUpperCase();
 
             if(wrongLetters.includes(key)) {
+                repetida_delay();
                 alert("Letra repetida");
+
 
             } else {
 
@@ -95,26 +124,32 @@ document.addEventListener("keydown", function(event) {
                         switch (errorCount) {
                             case 1 :
                                 gallowsHTML.src = "images/1.png";
+                                audio_errou.play();
                                 break;
 
                             case 2 :
                                 gallowsHTML.src = "images/2.png";
+                                audio_errou.play();
                                 break;
 
                             case 3 :
                                 gallowsHTML.src = "images/3.png";
+                                audio_errou.play();
                                 break;
 
                             case 4 :
                                 gallowsHTML.src = "images/4.png";
+                                audio_errou.play();
                                 break;
 
                             case 5 :
                                 gallowsHTML.src = "images/5.png";
+                                audio_errou.play();
                                 break;
 
                             case 6 :
                                 gallowsHTML.src = "images/6.png";
+                                audio_errou.play();
                                 break;
                         }
                     }
@@ -123,6 +158,7 @@ document.addEventListener("keydown", function(event) {
                         playState = false;
                         modalLoseHTML.classList.remove("hidden");
                         document.querySelector(".reiniciar_botao").classList.remove("hidden")
+                        perdeu_delay();
                         setTimeout(function() {modalLoseHTML.classList.add("hidden")}, 50000);
                     }
 
@@ -139,6 +175,7 @@ document.addEventListener("keydown", function(event) {
 
                                 for (let i = 0; i < indexOf.length; i++){
                                     lines[indexOf[i]].textContent = key;
+                                    audio_acerto.play();
                                 }
                             }
                         }
@@ -148,6 +185,7 @@ document.addEventListener("keydown", function(event) {
 
             if (count === currentWordLength) {
                 document.querySelector(".modal-win").classList.remove("hidden")
+                ganho_delay();
                 document.querySelector(".reiniciar_botao").classList.remove("hidden")
                 setTimeout(function() {document.querySelector(".modal-win").classList.add("hidden")}, 50000);
 
@@ -162,8 +200,8 @@ document.addEventListener("keydown", function(event) {
     }
 })
 
-const textArea1 = document.querySelector(".nova_palavra");
-const textArea2 = document.querySelector(".dica_nova_palavra");
+const nova_palavra = document.querySelector(".nova_palavra");
+const dica_nova_palavra = document.querySelector(".dica_nova_palavra");
 
 document.querySelector(".botao_branco").addEventListener("click", function() {
     document.querySelector(".modal").classList.remove("hidden");
@@ -176,9 +214,10 @@ document.querySelector(".add_palavra_div").addEventListener("click", function() 
         hint.push(dica_nova_palavra.value.toUpperCase());
         nova_palavra.value = "";
         dica_nova_palavra.value = "";
-        alert("Palavra adicionada com sucesso. Clique em Começar a Jogar para iniciar o jogo.");
-        document.querySelector(".add_palavra_div").classList.add("hidden");
+        alert("Palavra adicionada com sucesso. Clique em Fechar ou adicione mais palavras.");
+
     }
+
 
 })
 

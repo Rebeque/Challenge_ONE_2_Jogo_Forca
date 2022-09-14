@@ -62,8 +62,8 @@ body{
     position: absolute;
     width: 317px;
     height: 105px;
-    right: 8%;
-    top: 35%;
+    right: 5%;
+    top: 20%;
 
     /* Dark blue/dark-blue-300 */
     background: #0A3871;
@@ -85,6 +85,7 @@ body{
     line-height: 150%;
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
+    resize: none
 }
 
 .dica_nova_palavra {
@@ -96,6 +97,7 @@ body{
     line-height: 150%;
     /* Dark blue/dark-blue-300 */
     color: #0A3871;
+    resize: none
 }
 
 
@@ -162,37 +164,69 @@ body{
 }
 
 .botao_add_palavra, .botao_fecha {
+    font-family: 'Roboto';
+    font-style: normal;
     font-size: 14px;
-    font-weight: bold;
-    color: rgb(99, 63, 9);
-    text-transform: uppercase;
-    background: white;
-    border: 2px solid rgb(99, 63, 9);
+    font-weight: 400;
+    color: #0A3871;
+    background: #F3F5FC;
+    border: 1px solid #0A3871;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .botao_azul_add, .botao_branco_add {
+    font-family: 'Roboto';
+    font-style: normal;
     font-size: 14px;
-    font-weight: bold;
-    color: rgb(99, 63, 9);
-    text-transform: uppercase;
-    background: white;
-    border: 2px solid rgb(99, 63, 9);
+    font-weight: 400;
+    color: #0A3871;
+    background: #F3F5FC;
+    border: 1px solid #0A3871;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
+}
+
+.container_add_palavra {
+    position: absolute;
+    left: 15%;
+    top: 95%;
+}
+
+.nova_palavra_container {}
+
+.dica_nova_container {
+    margin-top: 20px;
+}
+
+.info_add_palavra {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    width: 98vw;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 10px;
+
 }
 
 .modal {
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 0px;
     width: 98vw;
     height: 50vh;
     padding: 10px;
-    font-family: serif;
-    font-size: 30px;
-    font-weight: bold;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
     border-radius: 10px;
 }
 
@@ -246,30 +280,27 @@ body{
     position: absolute;
     width: 10%;
     height: auto;
-    left: 45%;
+    left: 43%;
     top: 35%;
     text-align: center;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 45px;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 6%;
     /* White */
     color: #0A3871;
-
 }
+
 
 .hint-container {
     color: #0A3871;
-    text-align: center;
-    text-transform: uppercase;
+    text-align: left;
     position: absolute;
     width: 10%;
     height: auto;
-    left: 45%;
-    top: 40%;
+    left: 8%;
+    top: 15%;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -282,11 +313,10 @@ body{
 .wrong-letters-div {
     color: #0A3871;
     display: inline-block;
-    text-transform: uppercase;
     width: 20%;
     height: auto;
     left: 8%;
-    top: 35%;
+    top: 38%;
     position: absolute;
 }
 

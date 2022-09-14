@@ -7,9 +7,13 @@
     <! -- Limpa CSS e estabelece o novo -->
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/style.css">
+
+
+
 </head>
 <main>
 <body>
+
 
 <h1 class="hidden">Jogo da Forca - Challenge 2 ONE Alura - Turma 3</h1>
 
@@ -23,12 +27,12 @@
 </div>
 
     <div class="hint-container">
-        <h2>Dica</h2>
+        <h2>Dica:</h2>
         <p class="hint">- - -</p>
     </div>
 
     <div class="wrong-letters-div">
-        <p class="wrong-letters-p">Letras que você errou</p>
+        <p class="wrong-letters-p">Letras que você errou:</p>
 
     </div>
 
@@ -66,15 +70,23 @@
 </div>
 
 <div class="modal hidden">
+    <p class="info_add_palavra">Digite sua palavra e dica nos campos abaixo. <br>
+                                Você pode adicionar quantas quiser. <br>
+                                Quando acabar clique em "Fechar" para salvar.</p>
     <div class="add_palavra_div">
+        <div class="nova_palavra_container">
+            <textarea class="nova_palavra" id="nova_palavra" placeholder="Nova palavra aqui"></textarea>
+        </div>
         <p></p>
-        <textarea class="nova_palavra" id="nova_palavra" placeholder="Nova palavra aqui"></textarea>
-        <p></p>
-        <textarea class="dica_nova_palavra" id="dica_nova_palavra" placeholder="Dica aqui"></textarea>
+        <div class="dica_nova_container">
+            <textarea class="dica_nova_palavra" id="dica_nova_palavra" placeholder="Dica aqui"></textarea>
+        </div>
         <br>
         <br>
-        <button class="botao_azul_add" id="botao_add_palavra">Adicionar</button>
-        <button class="botao_branco_add" id="botao_fecha">Fechar</button>
+        <div class="container_add_palavra">
+            <button class="botao_azul_add" id="botao_add_palavra">Adicionar</button>
+            <button class="botao_branco_add" id="botao_fecha">Fechar</button>
+        </div>
     </div>
 </div>
 
